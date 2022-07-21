@@ -4,17 +4,9 @@
     "keywords": ["nginx", "proxy", "heroku"],
     "repository": "https://github.com/Venthanx/neww3",
     "env":{
-      "DOMAIN":{
-        "description" : "The domain to proxy through heroku (only HOSTNAME e.g. example.com)",
-        "required":true
-      },
       "KEEP_DYNO_ALIVE":{
         "description" : "Should neww3 keep heroku free dyno alive (change value to 'true' if required)",
         "value":"false",
-        "required":false
-      },
-      "HEROKU_APP_URL":{
-        "description" : "Full Heroku App URL (required if KEEP_DYNO_ALIVE is true)",
         "required":false
       }
     },

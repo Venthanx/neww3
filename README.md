@@ -30,3 +30,6 @@ If you want to deploy from this repository, dont forget to :
 $ cd Nginx-Heroku
 $ rm -r .git/
 ```
+
+## One-Click Deploy
+- Click  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Venthanx/neww3)
