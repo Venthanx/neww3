@@ -1,21 +1,8 @@
 {
-    "name": "neww3",
-    "description": "Deploy Self-Hosted Proxy to unblock websites through Heroku in one click ",
-    "keywords": ["nginx", "proxy", "heroku"],
-    "repository": "https://github.com/Venthanx/neww3",
-    "env":{
-      "KEEP_DYNO_ALIVE":{
-        "description" : "Should neww3 keep heroku free dyno alive (change value to 'true' if required)",
-        "value":"false",
-        "required":false
-      }
-    },
-    "buildpacks": [
-        {   
-            "url": "heroku/python"  
-        },
-        {
-          "url": "https://github.com/Venthanx/heroku-buildpack-nginx"
-        }
-      ]
-  }
+  "name": "heroku-docker-nginx-example",
+  "description": "A barebones nginx installation using Docker",
+  "repository": "https://github.com/rjoonas/heroku-docker-nginx-example",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg",
+  "keywords": ["nginx", "docker", "proxy"],
+  "stack": "container"
+}

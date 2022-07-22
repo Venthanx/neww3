@@ -1,35 +1,26 @@
-## Deploy HTML Native with NGINX to Heroku :
+# heroku-docker-nginx-example
 
-## Environment :
-```
-1. Heroku CLI
-2. Text Editor
-```
+Barebones example of deploying
+[the official nginx Docker image](https://github.com/docker-library/docs/tree/master/nginx)
+to Heroku. Serves an example html file at the root directory.
 
-## Installation :
-```
-Put your HTML Native to "app" directory.
-$ git clone https://github.com/Venthanx/neww3
+## Try it now!
 
-After that, Push to your Heroku Repository Apps.
-$ heroku login -i
-$ heroku create neww3
+Fire up an nginx proxy on [Heroku](https://www.heroku.com/) with a single click:
 
-$ git init
-$ heroku git:remote -a neww3
-$ git add .
-$ git commit -m "make it better"
-$ git push heroku master
-$ heroku ps:scale web=1
-$ heroku open
-```
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## Warning :
-```
-If you want to deploy from this repository, dont forget to :
-$ cd Nginx-Heroku
-$ rm -r .git/
-```
+## Manual deployment
 
-## One-Click Deploy
-- Click  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Venthanx/neww3)
+You will need to create a Heroku account and install the Heroku CLI, eg.
+`brew install heroku`.
+
+```
+git clone git@github.com:rjoonas/heroku-docker-nginx-example.git
+cd heroku-docker-nginx-example
+heroku container:login
+heroku create
+heroku container:push web
+heroku container:release web
+heroku open
+```
