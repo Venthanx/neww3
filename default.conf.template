@@ -13,12 +13,12 @@ server {
   }
 
   location ~ ^/baidu/     {
-    proxy_set_header    Host $proxy_host;
-    proxy_set_header    Referer 'https://$proxy_host';
+    proxy_set_header    Host baidu.com;
+    proxy_set_header    Referer 'https://baidu.com';
     proxy_set_header    Accept-Encoding "";
     proxy_set_header    CF-Connecting-IP "";
-    proxy_pass          https://$proxy_host;
-    sub_filter          $proxy_host $host;
-    sub_filter_once     off;  
+    proxy_pass https://baidu.com/;
+    sub_filter baidu.com $host;
+    sub_filter_once off;
   }
 }
