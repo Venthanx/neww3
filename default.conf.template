@@ -5,4 +5,10 @@ server {
     root   /usr/share/nginx/html;
     index  index.html index.htm;
   }
+
+  location /feedx     {
+    proxy_set_header Accept-Encoding "";  
+    proxy_pass https://feedx.fun/;  
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;    
+  }
 }
